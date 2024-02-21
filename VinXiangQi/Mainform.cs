@@ -921,6 +921,12 @@ namespace VinXiangQi
             MessageBox.Show("局面: \n" + fen + "\n 已经复制到剪贴板");
         }
 
+        private void ToolStripMenuItem_save_pgn_Click(object sender, EventArgs e)
+        {
+        
+            MessageBox.Show("棋谱已保存！");
+        }
+
         private void checkBox_debug_CheckedChanged(object sender, EventArgs e)
         {
             ScreenDebug = checkBox_debug.Checked;
@@ -961,11 +967,6 @@ namespace VinXiangQi
             }
             Model = ModelList[Settings.YoloModel];
             SaveSettings();
-        }
-
-        private void button_engine_settings_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void checkBox_universal_mouse_CheckedChanged(object sender, EventArgs e)
@@ -1113,5 +1114,7 @@ namespace VinXiangQi
             }
             InitSettingsUI();
         }
+
+
     }
 }

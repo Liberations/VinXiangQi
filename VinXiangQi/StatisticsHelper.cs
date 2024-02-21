@@ -97,8 +97,8 @@ namespace VinXiangQi
                 {
                     ManagementObjectCollection moc2 = mc.GetInstances();
                     foreach (ManagementObject mo in moc2)
-                    {
-                        if ((bool)mo["IPEnabled"] == true)
+                    {   
+                        if ((bool)mo["IPEnabled"] == true && mo["MacAddress"] != null)           
                             MoAddress = mo["MacAddress"].ToString();
                         mo.Dispose();
                     }
